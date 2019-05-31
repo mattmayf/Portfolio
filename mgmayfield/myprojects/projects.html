@@ -65,7 +65,7 @@
   <div class="card-deck mb-3 text-center">
 
 <!-- start of card 1 -->
-    <div class="card mb-4 shadow-sm hoverable">
+    <div class="card mb-4 shadow-sm">
       <br>
       <img class="mx-auto d-block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkMH5U8izr1ktMYhaRc2pNz--DpushKGwjWNVfwRZ9dtqzrqUM5A" style="width:50px;height:60px;" alt="Card image cap">
 
@@ -149,16 +149,32 @@
 <br>
                 <div class="row">
     <div class="col-sm-12 text-center">
-        <button class="btn btn-sm btn-outline-primary"><a href="https://mattmayf.github.io/Portfolio/mgmayfield/myprojects/calculator/calc.html" target="_blank">Check out Live</a></button>
-        <button class="btn btn-sm btn-outline-primary"><a href="https://github.com/mattmayf/Portfolio/blob/master/mgmayfield/myprojects/calculator/calc.html" target="_blank">Check the Code</a></button>
+        <button class="btn btn-sm btn-outline-primary"><a href="https://mattmayf.github.io/Portfolio/mgmayfield/myprojects/snake/snake.html" target="_blank">Check out Live</a></button>
+        <button class="btn btn-sm btn-outline-primary"><a href="https://github.com/mattmayf/Portfolio/blob/master/mgmayfield/myprojects/snake/snake.html" target="_blank">Check the Code</a></button>
     </div>
 </div>
       </div>
     </div>
 <!-- end of card 3 -->
 
+<script>
+$(document).ready(function() {
+ // executes when HTML-Document is loaded and DOM is ready
+console.log("document is ready");
 
 
+  $( ".card" ).hover(
+  function() {
+    $(this).addClass('shadow-lg').css('cursor', 'pointer');
+  }, function() {
+    $(this).removeClass('shadow-lg');
+  }
+);
+
+// document ready
+});
+
+</script>
 
 
 
