@@ -28,7 +28,61 @@
         }
       }
 
+/* toggle */
+.switcher {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
 
+.switcher + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.switcher + label {
+  padding: 2px;
+  width: 85px;
+  height: 25px;
+  background-color: transparent;
+  border-radius: 60px;
+}
+
+input.switcher + label:before,
+input.switcher + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+
+input.switcher + label:before {
+  right: 1px;
+  background-color: black;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+input.switcher + label:after {
+  width: 25px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: margin 0.4s;
+}
+
+input.switcher:checked + label:before {
+  background-color: lavender;
+}
+
+input.switcher:checked + label:after {
+  margin-left: 65px;
+}
 
     </style>
 
@@ -45,6 +99,12 @@
     <a class="p-2 text-dark" href="../media.html">Media</a>
     <a class="p-2 text-dark" href="../contact.html">Contact</a>
     <!--<a class="p-2 text-dark" href="ftpclient.html">FTP Client</a> -->
+
+    <!-- toggle -->
+    <div class="switch">
+<input id="switcher" class="switcher" type="checkbox" onchange="changeit()">
+<label for="switcher"></label>
+</div>
   </nav>
 
 
@@ -260,6 +320,20 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+// toggle
+function changeit() {
+
+var shortget = document.getElementsByTagName("body")[0];
+var aaa = shortget.style.backgroundColor;
+
+if (aaa == "black") {
+shortget.style.backgroundColor = "lavender";
+} else {
+shortget.style.backgroundColor = "black";
+}
+
+}
 </script>
 
 </body>
