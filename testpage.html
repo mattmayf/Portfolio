@@ -129,14 +129,14 @@ input.switcher:checked + label:after {
 
 </div>
 
-
+<!-- beginning welcome -->
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Welcome</h1>
   <p id="demo"></p>
   <!-- <p class="lead">I created this site for when I get bored or just need to take my mind of things. I am simply going to build on this as I do more projects and assignments. Nothing crazy, going to keep it sleek and simple. So heres a website I made using HTML, CSS, Bootstrap, and PHP that shows off my proficiency as a developer.</p> -->
   <a class="btn btn-lg btn-outline-primary" href="mgmayfield/myprojects/projects.html">Enter</a>
 </div>
-
+<!-- end welcome -->
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4" id="projects">Projects</h1>
@@ -287,7 +287,7 @@ input.switcher:checked + label:after {
 <p id="coll" class="text-muted">An app that provides a specific workout based on many different variables using AI technolgy. Coming Soon!</p>
         <!-- an app that provides a specific workout based on available equipment, cardio or strength preference, muscle group recovery, workout duration and recent routines. -->
         <!-- timer id -->
-        <h1 class="text-primary" id="demo"></h1>
+        <h1 class="text-primary" id="demotime"></h1>
 
 
 
@@ -354,14 +354,14 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  // Output the result in an element with id="demotime"
+  document.getElementById("demotime").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demotime").innerHTML = "EXPIRED";
   }
 }, 1000);
 
@@ -379,20 +379,6 @@ shortget.style.backgroundColor = "black";
 
 }
 // end toggle script
-
-// begin welcome script
-var i = 0;
-var txt = 'Hey, my name is Matt Mayfield. I am passionate about Front-End Development. Here is a website I created showing off my proficiency as a developer. Enjoy Simplicity!';
-var speed = 50;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-// end welcome script
 </script>
 
 </body>
