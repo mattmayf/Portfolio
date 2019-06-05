@@ -325,13 +325,15 @@ var x = setInterval(function() {
 function changeit() {
 
 var shortget = document.getElementsByTagName("body")[0];
-var shortget = document.getElementsByID("card-body")[0];
+var longget = document.getElementsByID("card-body")[0];
 var aaa = shortget.style.backgroundColor;
 
 if (aaa == "black") {
 shortget.style.backgroundColor = "white";
+longget.style.backgroundColor = "white";
 } else {
 shortget.style.backgroundColor = "black";
+longget.style.backgroundColor = "black";
 }
 
 }
