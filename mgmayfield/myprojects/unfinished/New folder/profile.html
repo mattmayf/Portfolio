@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Profile</title>
+	</head>
+	<style>
+	
+	
+
+	
+	
+	body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #333;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+
+	<body>
+		
+
+
+		
+	<h1>Profile</h1>
+	
+	<br>
+	
+	<img src="https://scontent-lhr3-1.cdninstagram.com/vp/58dd691b16dd6b6549dcb5940079ba5c/5CBCF154/t51.2885-15/e35/47582303_135369507467833_3148167486361148335_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com&se=7&ig_cache_key=MTk0NDY3NjY3MzY1MzIwMzQwOQ%3D%3D.2"alt="matty"width="300"height="300" />
+	
+	<br>
+	
+	<div>
+	<fieldset action="profile.php" method="post">
+			Weight:<br>
+			<input type="text" name="weight">
+			<br>
+			Height:<br>
+			<input type="text" name="height">
+			<br>
+			
+			Availibility:
+			
+			<table>
+				<tr>
+					<th></th>
+					<th>Sunday<button id="myBtn">+</button></th>
+					<th>Monday<button id="myBtn1">+</button></th>
+					<th>Tuesday<button id="myBtn2">+</button></th>
+					<th>Wednesday<button id="myBtn3">+</button></th>
+					<th>Thursday<button id="myBtn4">+</button></th>
+					<th>Friday<button id="myBtn5">+</button></th>
+					<th>Saturday<button id="myBtn6">+</button></th>
+				</tr>
+				
+				<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><b>Start</b></p>
+	<form action="/action_page.php">
+  Select time: <input type="time" name="usr_time">
+</form>
+<br>
+<p><b>End</b></p>
+<form action="/action_page.php">
+  Select time: <input type="time" name="usr_time"><br>
+  <input type="submit">
+</form>
+<br>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("myBtn");
+// Get the button that opens the modal
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+			<!--
+			Availibility(AM):<br>
+			<table>
+				<tr>
+					<th></th>
+					<th>Sunday</th>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+					<th>Saturday</th>
+				</tr>
+				<tr>
+					<th>12am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+					<tr>
+					<th>1am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>2am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>3am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>4am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>5am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>6am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>7am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>8am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>9am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>10am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>11am</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+			</table>
+			
+			<br>
+			
+Availibility(PM):<br>
+			<table>
+				<tr>
+					<th></th>
+					<th>Sunday</th>
+					<th>Monday</th>
+					<th>Tuesday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+					<th>Saturday</th>
+				</tr>
+				<tr>
+					<th>12pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+					<tr>
+					<th>1pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>2pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>3pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>4pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>5pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>6pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>7pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>8pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>9pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>10pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+				<tr>
+					<th>11pm</th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+					<th><input type="checkbox" name="avbut"></th>
+				</tr>
+			</table>
+			
+			<br>
+					
+				-->
+			
+			<input type="submit" name="update" value="Update">
+	
+	
+	</div>
+	
+	<div>
+	<p>some type of goal stuff will go here</p>
+	</div>
+	</fieldset>
+
+	<br>
+	
+	
+	<fieldset>
+	Name:<br>
+			<input type="text" name="weight" value="Name">
+			<br>
+	Update Password:<br>
+		<button type="button">Update</button>
+			<br>
+	</fieldset>
+	<br>
+	
+	</body>
+	
+	
+</html>
+
+
+
+
+
