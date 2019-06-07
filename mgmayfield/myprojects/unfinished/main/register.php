@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-   
+
     <title>Register</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
 
     <!-- Bootstrap core CSS -->
-<link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
     <style>
@@ -35,7 +35,7 @@
     <link href="form-validation.css" rel="stylesheet">
   </head>
   <body>
-  
+
    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal"><a href="index.html">Unfinished</a></h5>
   <nav class="my-2 my-md-0 mr-md-3">
@@ -57,11 +57,11 @@ Create a personal tailored training program for yourself.<br>
 Input your personal information to get better tailored workouts.<br>
 Input, save, and track your improvement via numbers and pictures.</p>
 </div>
-  
- 
- 
+
+
+
     <div>
-      
+
       <form class="needs-validation" novalidate>
         <div class="row">
           <div class="col-md-6 mb-3">
@@ -124,7 +124,7 @@ Input, save, and track your improvement via numbers and pictures.</p>
     </div>
   </div>
 </div>
- 
+
 <br>
 <br><br><br>
 </body>
